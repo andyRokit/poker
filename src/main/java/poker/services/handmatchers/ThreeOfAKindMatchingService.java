@@ -12,7 +12,6 @@ import java.util.List;
 @Order(7)
 public class ThreeOfAKindMatchingService implements HandMatcher {
     private static final String DESCRIPTION = "Three of a kind";
-
     private static final List<Integer> MATCHING_RANK_COUNTS = Arrays.asList(1, 1, 3);
 
     @Autowired

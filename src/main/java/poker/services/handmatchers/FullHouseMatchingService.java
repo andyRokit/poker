@@ -12,7 +12,6 @@ import java.util.List;
 @Order(4)
 public class FullHouseMatchingService implements HandMatcher {
     private static final String DESCRIPTION = "Full house";
-
     private static final List<Integer> MATCHING_RANK_COUNTS = Arrays.asList(2, 3);
 
     @Autowired
