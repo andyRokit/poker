@@ -1,4 +1,6 @@
-package poker;
+package poker.model;
+
+import poker.ApplicationException;
 
 import java.util.Arrays;
 
@@ -18,6 +20,10 @@ public enum Suit {
         return Arrays.stream(Suit.values())
                 .filter(e -> e.symbol == symbol)
                 .findFirst()
-                .orElseThrow(() -> new IllegalStateException(symbol + " is not a valid suit"));
+                .orElseThrow(() -> new ApplicationException(symbol + " is not a valid suit"));
+    }
+
+    public char toSymbol() {
+        return this.symbol;
     }
 }

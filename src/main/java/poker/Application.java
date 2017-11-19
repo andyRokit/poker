@@ -4,12 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import poker.services.PokerFileProcessorService;
 
 @SpringBootApplication
 public class Application implements CommandLineRunner {
 
     @Autowired
-    private PokerFileParserService pokerFileParserService;
+    private PokerFileProcessorService pokerFileParserService;
 
     @Override
     public void run(String... args) {
@@ -21,7 +22,7 @@ public class Application implements CommandLineRunner {
         final String filename = args[0];
 
         try {
-            pokerFileParserService.parse(filename);
+            pokerFileParserService.process(filename);
         } catch(final Exception ex) {
             ex.printStackTrace();
             throw ex;

@@ -1,4 +1,6 @@
-package poker;
+package poker.model;
+
+import poker.ApplicationException;
 
 import java.util.Arrays;
 
@@ -27,6 +29,10 @@ public enum Rank {
         return Arrays.stream(Rank.values())
                 .filter(e -> e.symbol == symbol)
                 .findFirst()
-                .orElseThrow(() -> new IllegalStateException(symbol + " is not a valid rank"));
+                .orElseThrow(() -> new ApplicationException(symbol + " is not a valid rank"));
+    }
+
+    public char toSymbol() {
+        return this.symbol;
     }
 }
