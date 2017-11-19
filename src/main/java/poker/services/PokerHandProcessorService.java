@@ -10,10 +10,10 @@ import java.util.List;
 @Service
 public class PokerHandProcessorService {
     @Autowired
-    private List<HandMatcher> handMathers;
+    private List<HandMatcher> handMatchers;
 
     public void process(final PokerHand hand) {
-        HandMatcher highestRankingMatch = handMathers.stream()
+        HandMatcher highestRankingMatch = handMatchers.stream()
                 .filter(handMatcher -> handMatcher.matches(hand))
                 .findFirst()
                 .get();
