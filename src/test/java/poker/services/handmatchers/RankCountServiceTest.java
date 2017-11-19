@@ -1,11 +1,10 @@
-package services.handmatchers;
+package poker.services.handmatchers;
 
 import org.junit.Test;
 import poker.model.PlayingCard;
 import poker.model.PokerHand;
 import poker.model.Rank;
 import poker.model.Suit;
-import poker.services.handmatchers.RankCountService;
 
 import java.util.Arrays;
 import java.util.List;

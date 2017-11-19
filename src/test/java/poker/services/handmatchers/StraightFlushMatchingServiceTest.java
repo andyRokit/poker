@@ -1,4 +1,4 @@
-package services.handmatchers;
+package poker.services.handmatchers;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -6,9 +6,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import poker.model.PokerHand;
-import poker.services.handmatchers.FlushMatchingService;
-import poker.services.handmatchers.StraightFlushMatchingService;
-import poker.services.handmatchers.StraightMatchingService;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;

@@ -1,8 +1,7 @@
-package services.handmatchers;
+package poker.services.handmatchers;
 
 import org.junit.Test;
 import poker.model.PokerHand;
-import poker.services.handmatchers.HighCardMatchingService;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;

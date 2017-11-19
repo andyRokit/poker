@@ -1,4 +1,4 @@
-package services.handmatchers;
+package poker.services.handmatchers;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -6,8 +6,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import poker.model.PokerHand;
-import poker.services.handmatchers.RankCountService;
-import poker.services.handmatchers.TwoPairMatchingService;
 
 import java.util.Arrays;
 
@@ -18,22 +16,22 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
-public class TwoPairMatchingServiceTest {
+public class OnePairMatchingServiceTest {
     @InjectMocks
-    private TwoPairMatchingService underTest;
+    private OnePairMatchingService underTest;
 
     @Mock
     private RankCountService rankCountService;
 
     @Test
     public void shouldReturnCorrectDescription() {
-        assertThat(underTest.description(), equalTo("Two pair"));
+        assertThat(underTest.description(), equalTo("One pair"));
     }
 
     @Test
     public void shouldReturnTrueWhenMatchExists() {
         final PokerHand testHand = mock(PokerHand.class);
-        when(rankCountService.countRanks(testHand)).thenReturn(Arrays.asList(1, 2, 2));
+        when(rankCountService.countRanks(testHand)).thenReturn(Arrays.asList(1, 1, 1, 2));
         assertThat(underTest.matches(testHand), is(true));
     }
 
