@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 @Order(8)
 public class TwoPairMatchingService implements HandMatcher {
-    private static final String DESCRIPTION = "Two Pair";
+    private static final String DESCRIPTION = "Two pair";
     private static final List<Integer> MATCHING_RANK_COUNTS = Arrays.asList(1, 2, 2);
 
     @Autowired

@@ -7,7 +7,7 @@ import poker.model.PokerHand;
 @Service
 @Order(10)
 public class HighCardMatchingService implements HandMatcher {
-    private static final String DESCRIPTION = "High Card";
+    private static final String DESCRIPTION = "High card";
 
     public String description() {
         return DESCRIPTION;

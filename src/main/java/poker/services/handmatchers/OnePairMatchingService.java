@@ -13,7 +13,7 @@ import static java.util.stream.Collectors.groupingBy;
 @Service
 @Order(9)
 public class OnePairMatchingService implements HandMatcher {
-    private static final String DESCRIPTION = "One Pair";
+    private static final String DESCRIPTION = "One pair";
     private static final List<Integer> MATCHING_RANK_COUNTS = Arrays.asList(1, 1, 1, 2);
 
     @Autowired
