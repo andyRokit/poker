@@ -3,21 +3,25 @@ package poker.model;
 import poker.ApplicationException;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class PokerHand extends ArrayList<PlayingCard> {
     public static PokerHand fromString(final String text) {
-        final PokerHand hand = new PokerHand();
-        Stream.of(text.split(" "))
+        final List<PlayingCard> cards = Stream.of(text.split(" "))
                 .map(PlayingCard::fromString)
-                .forEach(hand::add);
+                .collect(Collectors.toList());
 
-        if (hand.size() != 5) {
-            throw new ApplicationException(String.format("Hand [%s] does not contain 5 cards", text));
+        return new PokerHand(cards);
+    }
+
+    public PokerHand(final List<PlayingCard> cards) {
+        super(cards);
+
+        if (cards.size() != 5) {
+            throw new ApplicationException(String.format("Hand [%s] does not contain 5 cards", this));
         }
-
-        return hand;
     }
 
     @Override
