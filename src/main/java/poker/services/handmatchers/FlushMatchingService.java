@@ -20,7 +20,7 @@ public class FlushMatchingService implements HandMatcher {
 
     @Override
     public boolean matches(PokerHand hand) {
-        Map<Suit, Integer> countBySuit = hand.stream()
+        final Map<Suit, Integer> countBySuit = hand.stream()
                 .collect(
                         Collectors.groupingBy(
                                 PlayingCard::getSuit,

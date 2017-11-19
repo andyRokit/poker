@@ -17,7 +17,7 @@ public class PokerFileProcessorService {
     private PokerHandProcessorService pokerHandProcessorService;
 
     public void process(final String fileName) {
-        Path path = Paths.get(fileName);
+        final Path path = Paths.get(fileName);
         try(Stream<String> lines = Files.lines(path)) {
             lines.forEach(this::processLine);
         } catch (IOException ex) {
@@ -26,7 +26,7 @@ public class PokerFileProcessorService {
     }
 
     private void processLine(final String line) {
-        PokerHand hand = PokerHand.fromString(line);
+        final PokerHand hand = PokerHand.fromString(line);
         pokerHandProcessorService.process(hand);
     }
 }

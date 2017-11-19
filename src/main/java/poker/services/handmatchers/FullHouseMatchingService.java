@@ -22,7 +22,7 @@ public class FullHouseMatchingService implements HandMatcher {
     }
 
     public boolean matches(final PokerHand hand) {
-        List<Integer> rankCounts = rankCountService.countRanks(hand);
+        final List<Integer> rankCounts = rankCountService.countRanks(hand);
         return MATCHING_RANK_COUNTS.equals(rankCounts);
     }
 }

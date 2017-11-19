@@ -13,7 +13,7 @@ public class PokerHandProcessorService {
     private List<HandMatcher> handMatchers;
 
     public void process(final PokerHand hand) {
-        HandMatcher highestRankingMatch = handMatchers.stream()
+        final HandMatcher highestRankingMatch = handMatchers.stream()
                 .filter(handMatcher -> handMatcher.matches(hand))
                 .findFirst()
                 .get();

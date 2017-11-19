@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 @Service
 public class RankCountService {
     public List<Integer> countRanks(final PokerHand hand) {
-        Map<Rank, Integer> countByRank = hand.stream()
+        final Map<Rank, Integer> countByRank = hand.stream()
                 .collect(
                         Collectors.groupingBy(
                                 PlayingCard::getRank,
