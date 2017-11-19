@@ -34,4 +34,28 @@ public class PlayingCard {
     public String toString() {
         return String.valueOf(new char[]{rank.toSymbol(), suit.toSymbol()});
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        PlayingCard that = (PlayingCard) o;
+
+        if (rank != that.rank) {
+            return false;
+        }
+        return suit == that.suit;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = rank != null ? rank.hashCode() : 0;
+        result = 31 * result + (suit != null ? suit.hashCode() : 0);
+        return result;
+    }
 }
