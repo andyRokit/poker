@@ -25,8 +25,8 @@ public class RankCountServiceTest {
                 new PlayingCard(Rank.THREE, Suit.HEARTS)
         ));
 
-        List<Integer> actual = underTest.countRanks(testHand);
-        List<Integer> expected = Arrays.asList(2, 3);
+        final List<Integer> actual = underTest.countRanks(testHand);
+        final List<Integer> expected = Arrays.asList(2, 3);
         assertThat(actual, equalTo(expected));
     }
 
@@ -40,8 +40,8 @@ public class RankCountServiceTest {
                 new PlayingCard(Rank.THREE, Suit.HEARTS)
         ));
 
-        List<Integer> actual = underTest.countRanks(testHand);
-        List<Integer> expected = Arrays.asList(2, 3);
+        final List<Integer> actual = underTest.countRanks(testHand);
+        final List<Integer> expected = Arrays.asList(2, 3);
         assertThat(actual, equalTo(expected));
     }
 }

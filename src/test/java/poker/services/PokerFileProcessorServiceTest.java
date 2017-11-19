@@ -40,8 +40,8 @@ public class PokerFileProcessorServiceTest {
     }
 
     private String getTestFilePath(final String fileName) {
-        ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource(fileName).getFile());
+        final ClassLoader classLoader = getClass().getClassLoader();
+        final File file = new File(classLoader.getResource(fileName).getFile());
         return file.getAbsolutePath();
     }
 }
