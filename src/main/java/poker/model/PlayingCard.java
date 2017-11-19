@@ -11,6 +11,13 @@ public class PlayingCard {
         this.suit = suit;
     }
 
+    public Rank getRank() {
+        return rank;
+    }
+
+    public Suit getSuit() {
+        return suit;
+    }
 
     public static PlayingCard fromString(final String text) {
         if(text.length() != 2) {
